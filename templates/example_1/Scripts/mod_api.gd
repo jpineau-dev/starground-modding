@@ -48,8 +48,16 @@ enum REGION {AUTOMATION, SPACE, DUNGEON} #General categories for different regio
 ## Adds a building entry to the buildings table.
 # buildingID | A unique ID for a building
 # entry      | A dictionary with building info (see above for example)
-func add_building_entry(buildingID : String, entry : Dictionary) -> void:
-	Global.buildingsTable.merge({buildingID: entry}, true)
+func add_building_entry(categoryID: String, buildingID : String, entry : BuildingEntry) -> void:
+	var category = Global.buildingsTable.tree.get(categoryID)
+	
+	if category is not BuildingCategory:
+		print("Invalid building category: " + categoryID)
+		return
+	
+	var buildingEntry = category.buildings.get_or_add(buildingID, entry)
+	# We want to override the existing building
+	buildingEntry = entry;
 
 
 ## A function to add an effect entry to the effects table.

@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="Starground Mod"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
 
 ModAPI="*res://Scripts/mod_api.gd"
 Global="*res://Scripts/global.gd"
+
+[dotnet]
+
+project/assembly_name="Starground Mod"
 
 [rendering]
 

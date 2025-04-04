@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cwp641fjj4pdk"]
 
-[ext_resource type="Script" path="res://Scripts/save_component.gd" id="1_bjf7e"]
+[ext_resource type="Script" uid="uid://clpdubc1gdbxi" path="res://Scripts/save_component.gd" id="1_bjf7e"]
 
 [node name="save_component" type="Node"]
 process_priority = -5

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://be7doeigwdvil"]
+
+[ext_resource type="Script" uid="uid://b68ru7qd14tfj" path="res://Resources/buildings_tree.gd" id="1_swpdp"]
+
+[resource]
+script = ExtResource("1_swpdp")

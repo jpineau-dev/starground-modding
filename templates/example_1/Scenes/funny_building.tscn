@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://3cjdyv0ampev"]
 
-[ext_resource type="Script" path="res://Scripts/funny_building.gd" id="1_8q1b0"]
+[ext_resource type="Script" uid="uid://cd2iibmsmaehg" path="res://Scripts/funny_building.gd" id="1_8q1b0"]
 [ext_resource type="Texture2D" uid="uid://tvc4phxwm267" path="res://Sprites/mod_building_example.png" id="1_tyyk7"]
 [ext_resource type="PackedScene" uid="uid://mujpxyvrkyja" path="res://Scenes/inventory_component.tscn" id="3_0k1gu"]
 [ext_resource type="PackedScene" uid="uid://cwp641fjj4pdk" path="res://Scenes/save_component.tscn" id="4_081hg"]

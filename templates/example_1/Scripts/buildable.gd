@@ -38,7 +38,7 @@ func _exit_tree():
 
 
 func _enter_tree():
-	buildingData = Global.buildingsTable.get(buildingID, null)
+	buildingData = Global.buildingsTable.search_building_by_id(buildingID)
 	if buildingData:
 		if buildingData.PowerStatus < 0:
 			setPowerConsumption = abs(buildingData.PowerStatus)
@@ -160,8 +160,10 @@ func set_underwater(val):
 
 func _add_before_drop():
 	if buildingID != "":
-		if Global.buildingsTable.has(buildingID):
-			for i in Global.buildingsTable[buildingID].Ingredients:
+		var building = Global.buildingsTable.search_building_by_id(buildingID)
+		
+		if building != null:
+			for i in building.Ingredients:
 				dropData.push_back(ModAPI.create_item_dict(i.ID, i.Amount))
 
 
