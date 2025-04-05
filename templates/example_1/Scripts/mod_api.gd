@@ -23,6 +23,7 @@ extends Node
 enum RESEARCH_TYPES {INFINITE, SINGLE, TIERED} #Categories for research
 enum DAMAGE {SHARP, BLUNT, MAGIC} #Not used yet, but hopefully soon
 enum REGION {AUTOMATION, SPACE, DUNGEON} #General categories for different regions
+enum ENTITY_TYPES{ENTITY, ANIMAL, ENEMY}
 #endregion
 
 
@@ -49,7 +50,7 @@ enum REGION {AUTOMATION, SPACE, DUNGEON} #General categories for different regio
 # buildingID | A unique ID for a building
 # entry      | A dictionary with building info (see above for example)
 func add_building_entry(categoryID: String, buildingID : String, entry : BuildingEntry) -> void:
-	var category = Global.buildingsTable.tree.get(categoryID)
+	var category = Global.buildingsTree.tree.get(categoryID)
 	
 	if category is not BuildingCategory:
 		print("Invalid building category: " + categoryID)

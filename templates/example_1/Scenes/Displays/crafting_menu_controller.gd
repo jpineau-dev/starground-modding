@@ -23,7 +23,7 @@ func _ready():
 
 	recipes = Global.recipeTable.get(object.buildingID, [])
 
-	var buildingData = Global.buildingsTable.search_building_by_id(object.buildingID)
+	var buildingData = Global.buildingsTree.search_building_by_id(object.buildingID)
 
 	progressBar = outputSection.get_node("ProgressBar")
 	fuelBar = fuelSection.get_node("FuelBar")

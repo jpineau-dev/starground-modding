@@ -10,7 +10,7 @@ func _ready():
 	for i in Global.researchTable:
 		if Global.researchTable[i].Unlocks.has(objectID):
 			islocked = true
-	var loadData = Global.buildingsTable.search_building_by_id(objectID)
+	var loadData = Global.buildingsTree.search_building_by_id(objectID)
 	if loadData:
 		$Button / MarginContainer / VBoxContainer / powerIndicator.visible = loadData.PowerStatus != 0
 		$Button / MarginContainer / VBoxContainer / FuelIndicator.visible = loadData.UsesFuel

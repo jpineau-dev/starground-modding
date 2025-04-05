@@ -161,7 +161,7 @@ func update_info_panel():
 		if craftingBuildings.size() > 0:
 			panelText += tr("Created In") + "\n"
 			for buildingID in craftingBuildings:
-				var building = Global.buildingsTable.search_building_by_id(buildingID)
+				var building = Global.buildingsTree.search_building_by_id(buildingID)
 				panelText += "[img=24]" + building.Sprite.resource_path + "[/img] "
 
 	canDisplayInfo = false

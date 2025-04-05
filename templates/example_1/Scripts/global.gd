@@ -1,7 +1,7 @@
 extends Node
 
 var itemsTable: Dictionary = {}
-var buildingsTable: Resource = load("res://Resources/buildings_tree.tres")
+var buildingsTree: Resource = load("res://Resources/buildings_tree.tres")
 var researchTable: Dictionary = {}
 var recipeTable: Dictionary = {}
 var cacheTable: Array = []
@@ -693,9 +693,9 @@ func _ready():
 			lootTable.merge({i: lootArray})
 	
 	# Reorganization of categories and buildings
-	buildingsTable.reorder_by_position()
-	for i:String in buildingsTable.tree:
-		buildingsTable.tree[i].reorder_by_position()
+	buildingsTree.reorder_by_position()
+	for i:String in buildingsTree.tree:
+		buildingsTree.tree[i].reorder_by_position()
 
 	var research = load("res://Resources/research_table.tres")
 	researchTable.merge(research.researchTable)

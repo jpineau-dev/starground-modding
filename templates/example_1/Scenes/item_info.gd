@@ -16,7 +16,7 @@ func find_recipe():
 
 
 func _ready():
-	var test1 = Global.buildingsTable.search_building_by_id(dataID)
+	var test1 = Global.buildingsTree.search_building_by_id(dataID)
 	var test2 = Global.regionsTable.get(dataID)
 	var test3 = find_recipe()
 	var test4 = ModAPI.get_item_data(dataID)

@@ -7,7 +7,7 @@ var lastBuildingID = ""
 
 func _ready() -> void :
 	var isFirstIteration: bool = true
-	for i in Global.buildingsTable.tree:
+	for i in Global.buildingsTree.tree:
 		# Construct buildings tabs from tree categories
 		var tabsContainer = $Grids/ScrollContainer
 		var newTab: GridContainer = load("res://Scenes/BuildTab.tscn").instantiate()
@@ -21,12 +21,12 @@ func _ready() -> void :
 		var newBtn: Button = load("res://Scenes/BuildTabButton.tscn").instantiate()
 		newBtn.name = i
 		newBtn.tooltip_text = i
-		newBtn.icon = Global.buildingsTable.tree[i].icon
+		newBtn.icon = Global.buildingsTree.tree[i].icon
 		newBtn.node = tabNode
 		buttonsContainer.add_child(newBtn)
 		
 		# Then we add buildings to the tab
-		for j: String in Global.buildingsTable.tree[i].buildings:
+		for j: String in Global.buildingsTree.tree[i].buildings:
 			var buildButton = load("res://Scenes/BuildButton.tscn").instantiate()
 			buildButton.objectID = j
 			tabNode.add_child(buildButton)
@@ -41,7 +41,7 @@ func _process(_delta):
 			if $Details / VBoxContainer.visible:
 				$Details / VBoxContainer.visible = false
 		else:
-			var buildingData = Global.buildingsTable.search_building_by_id(buildingID)
+			var buildingData = Global.buildingsTree.search_building_by_id(buildingID)
 
 			$Details / VBoxContainer.visible = true
 			$Details / VBoxContainer / Name.text = buildingData.ObjectName

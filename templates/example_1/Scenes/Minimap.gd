@@ -219,7 +219,7 @@ func update_texture():
 
 func draw_building(pos, building, update = false, override = false):
 	if initialLoad || override:
-		var buildingReference = Global.buildingsTable.search_building_by_id(building.buildingID)
+		var buildingReference = Global.buildingsTree.search_building_by_id(building.buildingID)
 		if buildingReference:
 			if building.is_in_group("Dungeon"):
 				return
@@ -249,7 +249,7 @@ func draw_building(pos, building, update = false, override = false):
 
 func erase_building(pos, buildingObject, update = false):
 	if initialLoad:
-		var buildingReference = Global.buildingsTable.search_building_by_id(buildingObject.buildingID)
+		var buildingReference = Global.buildingsTree.search_building_by_id(buildingObject.buildingID)
 
 		if buildingReference:
 			if buildingObject.is_in_group("Dungeon"):

@@ -41,7 +41,7 @@ func select_new_object(newObjectID):
 		for i in get_tree().get_nodes_in_group(nodeType):
 			i.set_indicator_visibility(false)
  
-	object = Global.buildingsTable.search_building_by_id(newObjectID)
+	object = Global.buildingsTree.search_building_by_id(newObjectID)
  
 	if object:
 		objectID = newObjectID
