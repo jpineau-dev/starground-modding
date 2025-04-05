@@ -306,7 +306,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 		),
 		"Logistics": BuildingCategory.new(
 			10,
-			load("res://Sprites/icon_production.png"),
+			load("res://Sprites/icon_logistics.png"),
 			{
 				"starground:building_mover": BuildingEntry.new(
 					"Mover",
@@ -568,7 +568,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 		),
 		"Power" : BuildingCategory.new(
 			20,
-			load("res://Sprites/icon_production.png"),
+			load("res://Sprites/icon_power.png"),
 			{
 				"starground:building_nuclear_reactor": BuildingEntry.new(
 				"Nuclear Reactor",
@@ -719,7 +719,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 		),
 		"Decorations": BuildingCategory.new(
 			30,
-			load("res://Sprites/icon_production.png"),
+			load("res://Sprites/icon_decorations.png"),
 			{
 				"starground:building_fence": BuildingEntry.new(
 					"Fence",
@@ -924,7 +924,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 		),
 		"Miscellaneous" : BuildingCategory.new(
 			40,
-			load("res://Sprites/icon_production.png"),
+			load("res://Sprites/icon_miscellaneous.png"),
 			{
 				"starground:building_trough": BuildingEntry.new(
 					"Trough",

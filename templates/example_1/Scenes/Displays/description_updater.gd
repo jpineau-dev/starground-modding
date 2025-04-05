@@ -6,14 +6,32 @@ var lastBuildingID = ""
 @export var gridContainer: Control
 
 func _ready() -> void :
+	var isFirstIteration: bool = true
 	for i in Global.buildingsTable.tree:
-		var container = gridContainer.get_node_or_null(i + "Tab")
-		if container:
-			for j: String in Global.buildingsTable.tree[i].buildings:
-				var buildButton = load("res://Scenes/BuildButton.tscn").instantiate()
-				buildButton.objectID = j
-				container.add_child(buildButton)
-
+		# Construct buildings tabs from tree categories
+		var tabsContainer = $Grids/ScrollContainer
+		var newTab: GridContainer = load("res://Scenes/BuildTab.tscn").instantiate()
+		newTab.name = i + "Tab"
+		newTab.visible = true if isFirstIteration else false
+		tabsContainer.add_child(newTab)
+		
+		# Now construct buildings tabs buttons
+		var tabNode = gridContainer.get_node_or_null(i + "Tab")
+		var buttonsContainer = $"../../VerticalBox"
+		var newBtn: Button = load("res://Scenes/BuildTabButton.tscn").instantiate()
+		newBtn.name = i
+		newBtn.tooltip_text = i
+		newBtn.icon = Global.buildingsTable.tree[i].icon
+		newBtn.node = tabNode
+		buttonsContainer.add_child(newBtn)
+		
+		# Then we add buildings to the tab
+		for j: String in Global.buildingsTable.tree[i].buildings:
+			var buildButton = load("res://Scenes/BuildButton.tscn").instantiate()
+			buildButton.objectID = j
+			tabNode.add_child(buildButton)
+		
+		isFirstIteration = false
 
 func _process(_delta):
 	if buildingID != lastBuildingID:

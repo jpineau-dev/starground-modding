@@ -1,0 +1,169 @@
+[gd_scene load_steps=7 format=3 uid="uid://5pqqpvmeeri1"]
+
+[ext_resource type="PackedScene" uid="uid://buu55yywkoupv" path="res://ui_blur.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://b7v2gy8sc8h46" path="res://Sprites/background_9slice.png" id="2"]
+[ext_resource type="Theme" uid="uid://dhr0128vapequ" path="res://Themes/theme.tres" id="3"]
+[ext_resource type="Script" uid="uid://dathc8jdfvgow" path="res://Scenes/Displays/description_updater.gd" id="10"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkv6g"]
+bg_color = Color(0.207843, 0.207843, 0.298039, 0.588235)
+border_width_left = 4
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jekc"]
+bg_color = Color(0.207843, 0.207843, 0.298039, 0.588235)
+border_width_left = 4
+expand_margin_left = 7.0
+expand_margin_top = 2.0
+expand_margin_right = 4.0
+expand_margin_bottom = 2.0
+
+[node name="InventoryDisplayBuilding" type="MarginContainer"]
+custom_minimum_size = Vector2(650, 350)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -175.0
+offset_right = 270.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Blur" parent="." instance=ExtResource("1")]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+layout_mode = 2
+texture = ExtResource("2")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="Container" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="GridContainer" type="GridContainer" parent="Container"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VerticalBox" type="VBoxContainer" parent="Container/GridContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="Container/GridContainer/HBoxContainer"]
+modulate = Color(0.207843, 0.207843, 0.298039, 0.294118)
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_lkv6g")
+
+[node name="Tabs" type="VBoxContainer" parent="Container/GridContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Container/GridContainer/HBoxContainer/Tabs"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3")
+theme_type_variation = &"HeaderLarge"
+text = "Building Menu"
+horizontal_alignment = 1
+
+[node name="VSeparator" type="HSeparator" parent="Container/GridContainer/HBoxContainer/Tabs"]
+modulate = Color(0.207843, 0.207843, 0.298039, 0.294118)
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_0jekc")
+
+[node name="Buttons" type="HBoxContainer" parent="Container/GridContainer/HBoxContainer/Tabs" node_paths=PackedStringArray("gridContainer")]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("10")
+gridContainer = NodePath("Grids/ScrollContainer")
+
+[node name="Grids" type="MarginContainer" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Grids"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons"]
+modulate = Color(0.207843, 0.207843, 0.298039, 0.294118)
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_lkv6g")
+
+[node name="Details" type="MarginContainer" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons"]
+custom_minimum_size = Vector2(128, 0)
+layout_direction = 2
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Details"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Details/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3")
+theme_type_variation = &"HeaderSmall"
+text = "Furnace"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="VSeparator" type="HSeparator" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Details/VBoxContainer"]
+modulate = Color(0.207843, 0.207843, 0.298039, 0.294118)
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_0jekc")
+
+[node name="Items" type="GridContainer" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Details/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="TagsBar" type="HSeparator" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Details/VBoxContainer"]
+modulate = Color(0.207843, 0.207843, 0.298039, 0.294118)
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_0jekc")
+
+[node name="TagsLabel" type="RichTextLabel" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Details/VBoxContainer"]
+custom_minimum_size = Vector2(124.7, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.207843, 0.207843, 0.298039, 1)
+bbcode_enabled = true
+fit_content = true
+
+[node name="VSeparator2" type="HSeparator" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Details/VBoxContainer"]
+modulate = Color(0.207843, 0.207843, 0.298039, 0.294118)
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_0jekc")
+
+[node name="Description" type="Label" parent="Container/GridContainer/HBoxContainer/Tabs/Buttons/Details/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3")
+theme_type_variation = &"HeaderSmall"
+theme_override_constants/line_spacing = 0
+text = "The furnace is used for "
+autowrap_mode = 3
+clip_text = true
