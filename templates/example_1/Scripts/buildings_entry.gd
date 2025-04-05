@@ -1,11 +1,11 @@
 extends Resource
 class_name BuildingEntry
 
-@export var position: int = 0
-@export var building_id: String = "starground:building_default"
+@export var position: int
 @export var building: Dictionary
 
 func _init(
+	_position: int = 0,
 	objectName: String = "Default building",
 	description: String = "This is a default building",
 	objectPath: String = "res://Scenes/sample.tscn",
@@ -25,6 +25,8 @@ func _init(
 	positionOffset: Vector2 = Vector2(0, 0), 
 	bannedRegions: Array = [],
 ) -> void:
+	position = _position
+	
 	building = {
 		"ObjectName": objectName, 
 		"Description": description, 

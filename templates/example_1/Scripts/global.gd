@@ -691,6 +691,11 @@ func _ready():
 				lootTable[i].push_back(j)
 		else:
 			lootTable.merge({i: lootArray})
+	
+	# Reorganization of categories and buildings
+	buildingsTable.reorder_by_position()
+	for i:String in buildingsTable.tree:
+		buildingsTable.tree[i].reorder_by_position()
 
 	var research = load("res://Resources/research_table.tres")
 	researchTable.merge(research.researchTable)

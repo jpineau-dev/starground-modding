@@ -36,10 +36,11 @@ func merge_custom_ree(custom: Dictionary):
 func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 	return {
 		"Production": BuildingCategory.new(
-			0,
+			10,
 			load("res://Sprites/icon_production.png"),
 			{
 				"starground:building_furnace": BuildingEntry.new(
+					10,
 					"Furnace",
 					"KEY_BUILDING_FURNACE",
 					"res://Scenes/furnace.tscn",
@@ -54,6 +55,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_oven": BuildingEntry.new(
+					20,
 					"Oven",
 					"KEY_BUILDING_OVEN",
 					"res://Scenes/oven.tscn",
@@ -69,6 +71,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_brewing_station": BuildingEntry.new(
+					30,
 					"Brewing Station",
 					"KEY_BUILDING_BREWING_STATION",
 					"res://Scenes/brewing_station.tscn",
@@ -85,6 +88,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_electric_furnace": BuildingEntry.new(
+					40,
 					"Electric Furnace",
 					"KEY_BUILDING_ELECTRIC_FURNACE",
 					"res://Scenes/electric_furnace.tscn",
@@ -102,6 +106,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-10,
 				),
 				"starground:building_crafter": BuildingEntry.new(
+					50,
 					"Crafter",
 					"KEY_BUILDING_CRAFTER",
 					"res://Scenes/crafter.tscn",
@@ -118,6 +123,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-5,
 				),
 				"starground:building_purifier": BuildingEntry.new(
+					60,
 					"Purifier",
 					"KEY_BUILDING_PURIFIER",
 					"res://Scenes/purifier.tscn",
@@ -135,6 +141,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-8,
 				),
 				"starground:building_collector": BuildingEntry.new(
+					70,
 					"Collector",
 					"KEY_BUILDING_COLLECTOR",
 					"res://Scenes/collector.tscn",
@@ -151,6 +158,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-5,
 				),
 				"starground:building_oil_rig": BuildingEntry.new(
+					80,
 					"Oil Rig",
 					"KEY_BUILDING_OIL_RIG",
 					"res://Scenes/oil_rig.tscn",
@@ -170,6 +178,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					true,
 				),
 				"starground:building_harvester": BuildingEntry.new(
+					90,
 					"Harvester",
 					"KEY_BUILDING_HARVESTER",
 					"res://Scenes/harvester.tscn",
@@ -186,6 +195,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-5,
 				),
 				"starground:building_researcher": BuildingEntry.new(
+					100,
 					"Researcher",
 					"KEY_BUILDING_RESEARCHER",
 					"res://Scenes/researcher.tscn",
@@ -206,6 +216,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_foundry": BuildingEntry.new(
+					110,
 					"Foundry",
 					"KEY_BUILDING_FOUNDRY",
 					"res://Scenes/foundry.tscn",
@@ -221,6 +232,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_refiner": BuildingEntry.new(
+					120,
 					"Refiner",
 					"KEY_BUILDING_REFINER",
 					"res://Scenes/refiner.tscn",
@@ -238,6 +250,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-5,
 				),
 				"starground:building_thumper": BuildingEntry.new(
+					130,
 					"Thumper",
 					"KEY_BUILDING_THUMPER",
 					"res://Scenes/thumper.tscn",
@@ -255,6 +268,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-30,
 				),
 				"starground:building_water_pump": BuildingEntry.new(
+					140,
 					"Water Pump",
 					"KEY_BUILDING_WATER_PUMP",
 					"res://Scenes/water_pump.tscn",
@@ -274,6 +288,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					true,
 				),
 				"starground:building_farm_plot": BuildingEntry.new(
+					150,
 					"Farm Plot",
 					"KEY_BUILDING_FARM_PLOT",
 					"res://Scenes/farm_plot.tscn",
@@ -286,6 +301,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(2, 2),
 				),
 				"starground:building_grinder": BuildingEntry.new(
+					160,
 					"Grinder",
 					"KEY_BUILDING_GRINDER",
 					"res://Scenes/grinder.tscn",
@@ -305,10 +321,11 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 			}
 		),
 		"Logistics": BuildingCategory.new(
-			10,
+			20,
 			load("res://Sprites/icon_logistics.png"),
 			{
 				"starground:building_mover": BuildingEntry.new(
+					10,
 					"Mover",
 					"KEY_BUILDING_MOVER",
 					"res://Scenes/mover.tscn",
@@ -330,6 +347,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					true
 				),
 				"starground:building_long_range_mover": BuildingEntry.new(
+					20,
 					"Long Range Mover",
 					"KEY_BUILDING_LONG_RANGE_MOVER",
 					"res://Scenes/mover_long.tscn",
@@ -353,6 +371,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					true,
 				),
 				"starground:building_conveyor": BuildingEntry.new(
+					30,
 					"Conveyor",
 					"KEY_BUILDING_CONVEYOR",
 					"res://Scenes/conveyor.tscn",
@@ -370,6 +389,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_underground_conveyor": BuildingEntry.new(
+					40,
 					"Underground Conveyor",
 					"KEY_BUILDING_UNDERGROUND_CONVEYOR",
 					"res://Scenes/underground_conveyor.tscn",
@@ -393,6 +413,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false
 				),
 				"starground:building_underground_conveyor_v2": BuildingEntry.new(
+					50,
 					"Underground Conveyor V2",
 					"KEY_BUILDING_UNDERGROUND_CONVEYOR_V2",
 					"res://Scenes/underground_conveyor_v2.tscn",
@@ -416,6 +437,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_conveyor_v2": BuildingEntry.new(
+					60,
 					"Conveyor V2",
 					"KEY_BUILDING_CONVEYOR_V2",
 					"res://Scenes/conveyor_v2.tscn",
@@ -434,6 +456,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_chest": BuildingEntry.new(
+					70,
 					"Chest",
 					"KEY_BUILDING_CHEST",
 					"res://Scenes/chest.tscn",
@@ -444,6 +467,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					load("res://Sprites/chest.png"),
 				),
 				"starground:building_storage_hub": BuildingEntry.new(
+					80,
 					"Storage Hub",
 					"KEY_BUILDING_STORAGE_HUB",
 					"res://Scenes/storage_hub.tscn",
@@ -457,6 +481,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(3, 3),
 				),
 				"starground:building_big_chest": BuildingEntry.new(
+					90,
 					"Big Chest",
 					"KEY_BUILDING_BIG_CHEST",
 					"res://Scenes/big_chest.tscn",
@@ -470,6 +495,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_splitter": BuildingEntry.new(
+					100,
 					"Splitter",
 					"KEY_BUILDING_SPLITTER",
 					"res://Scenes/splitter.tscn",
@@ -493,6 +519,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false
 				),
 				"starground:building_splitter_v2": BuildingEntry.new(
+					110,
 					"Splitter V2",
 					"KEY_BUILDING_SPLITTER",
 					"res://Scenes/splitter_v2.tscn",
@@ -516,6 +543,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false
 				),
 				"starground:building_shredder": BuildingEntry.new(
+					120,
 					"Shredder",
 					"KEY_BUILDING_SHREDDER",
 					"res://Scenes/shredder.tscn",
@@ -533,6 +561,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-3,
 				),
 				"starground:building_space_elevator": BuildingEntry.new(
+					130,
 					"Space Elevator",
 					"KEY_BUILDING_SPACE_ELEVATOR",
 					"res://Scenes/space_elevator.tscn",
@@ -552,6 +581,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					-40
 				),
 				"starground:building_vault": BuildingEntry.new(
+					140,
 					"Vault",
 					"KEY_BUILDING_VAULT",
 					"res://Scenes/vault.tscn",
@@ -567,26 +597,28 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 			}
 		),
 		"Power" : BuildingCategory.new(
-			20,
+			30,
 			load("res://Sprites/icon_power.png"),
 			{
 				"starground:building_nuclear_reactor": BuildingEntry.new(
-				"Nuclear Reactor",
-				"KEY_BUILDING_NUCLEAR_REACTOR",
-				"res://Scenes/nuclear_reactor.tscn",
-					[
-					BuildingIngredient.new("starground:cobalt_ingot", 20),
-					BuildingIngredient.new("starground:copper_wire", 5),
-					BuildingIngredient.new("starground:stone_brick", 20),
-				],
-				load("res://Sprites/nuclear_reactor.png"),
-				[],
-				Vector2(0, -5),
-				Vector2(4, 4),
-				false,
-				false,
+					10,
+					"Nuclear Reactor",
+					"KEY_BUILDING_NUCLEAR_REACTOR",
+					"res://Scenes/nuclear_reactor.tscn",
+						[
+						BuildingIngredient.new("starground:cobalt_ingot", 20),
+						BuildingIngredient.new("starground:copper_wire", 5),
+						BuildingIngredient.new("starground:stone_brick", 20),
+					],
+					load("res://Sprites/nuclear_reactor.png"),
+					[],
+					Vector2(0, -5),
+					Vector2(4, 4),
+					false,
+					false,
 				),
 				"starground:building_nuclear_turbine": BuildingEntry.new(
+					20,
 					"Nuclear Turbine",
 					"KEY_BUILDING_NUCLEAR_TURBINE",
 					"res://Scenes/nuclear_turbine.tscn",
@@ -603,6 +635,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					40,
 				),
 				"starground:building_treadmill": BuildingEntry.new(
+					30,
 					"Treadmill",
 					"KEY_BUILDING_TREADMILL",
 					"res://Scenes/treadmill.tscn",
@@ -618,6 +651,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					20,
 				),
 				"starground:building_burner": BuildingEntry.new(
+					40,
 					"Burner",
 					"KEY_BUILDING_BURNER",
 					"res://Scenes/burner.tscn",
@@ -634,6 +668,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					20,
 				),
 				"starground:building_tesla_coil": BuildingEntry.new(
+					50,
 					"Tesla Coil",
 					"KEY_BUILDING_TESLA_COIL",
 					"res://Scenes/tesla_coil.tscn",
@@ -649,6 +684,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_tesla_coil_v2": BuildingEntry.new(
+					60,
 					"Tesla Coil V2",
 					"KEY_BUILDING_TESLA_COIL",
 					"res://Scenes/tesla_coil_v2.tscn",
@@ -668,6 +704,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					true,
 				),
 				"starground:building_solar_panel": BuildingEntry.new(
+					70,
 					"Solar Panel",
 					"KEY_BUILDING_SOLAR_PANEL",
 					"res://Scenes/solar_panel.tscn",
@@ -687,6 +724,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_battery": BuildingEntry.new(
+					80,
 					"Battery",
 					"KEY_BUILDING_BATTERY",
 					"res://Scenes/battery.tscn",
@@ -701,6 +739,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_big_battery": BuildingEntry.new(
+					90,
 					"Big Battery",
 					"KEY_BUILDING_BIG_BATTERY",
 					"res://Scenes/big_battery.tscn",
@@ -718,10 +757,11 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 			}
 		),
 		"Decorations": BuildingCategory.new(
-			30,
+			40,
 			load("res://Sprites/icon_decorations.png"),
 			{
 				"starground:building_fence": BuildingEntry.new(
+					10,
 					"Fence",
 					"KEY_BUILDING_FENCE",
 					"res://Scenes/fence.tscn",
@@ -731,6 +771,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					load("res://Sprites/fence_icon.png"),
 				),
 				"starground:building_fence_gate": BuildingEntry.new(
+					20,
 					"Fence Gate",
 					"KEY_BUILDING_FENCE",
 					"res://Scenes/fence_gate.tscn",
@@ -741,6 +782,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					load("res://Sprites/fence_gate_icon.png"),
 				),
 				"starground:building_plant_1": BuildingEntry.new(
+					30,
 					"Plant 1",
 					"KEY_BUILDING_PLANT",
 					"res://Scenes/plant_1.tscn",
@@ -754,6 +796,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_plant_2": BuildingEntry.new(
+					40,
 					"Plant 2",
 					"KEY_BUILDING_PLANT",
 					"res://Scenes/plant_2.tscn",
@@ -767,6 +810,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_plant_3": BuildingEntry.new(
+					50,
 					"Plant 3",
 					"KEY_BUILDING_PLANT",
 					"res://Scenes/plant_3.tscn",
@@ -780,6 +824,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_christmas_tree": BuildingEntry.new(
+					60,
 					"Christmas Tree",
 					"KEY_BUILDING_CHRISTMAS_TREE",
 					"res://Scenes/christmas_tree.tscn",
@@ -794,6 +839,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(2, 2),
 				),
 				"starground:building_present": BuildingEntry.new(
+					70,
 					"Present",
 					"KEY_BUILDING_CHRISTMAS_TREE",
 					"res://Scenes/present.tscn",
@@ -807,6 +853,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_snowman": BuildingEntry.new(
+					80,
 					"Snowman",
 					"KEY_BUILDING_CHRISTMAS_TREE",
 					"res://Scenes/snowman.tscn",
@@ -819,6 +866,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_dreadcap_monument": BuildingEntry.new(
+					90,
 					"Dreadcap Monument",
 					"KEY_BUILDING_DREADCAP_MONUMENT",
 					"res://Scenes/dreadcap_monument.tscn",
@@ -831,6 +879,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(2, 2),
 				),
 				"starground:building_spore_monument": BuildingEntry.new(
+					100,
 					"Spore Monument",
 					"KEY_BUILDING_SPORE_MONUMENT",
 					"res://Scenes/spore_monument.tscn",
@@ -843,6 +892,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(2, 2),
 				),
 				"starground:building_godot_plush": BuildingEntry.new(
+					110,
 					"Godot Plush",
 					"KEY_BUILDING_GODOT_PLUSH",
 					"res://Scenes/godot_plush.tscn",
@@ -855,6 +905,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(2, 2),
 				),
 				"starground:building_stone_wall": BuildingEntry.new(
+					120,
 					"Stone Wall",
 					"KEY_BUILDING_STONE_WALL",
 					"res://Scenes/stone_wall.tscn",
@@ -867,6 +918,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_lamp": BuildingEntry.new(
+					130,
 					"Lamp",
 					"KEY_BUILDING_LAMP",
 					"res://Scenes/lamp.tscn",
@@ -885,6 +937,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_beach_ball": BuildingEntry.new(
+					140,
 					"Beach Ball",
 					"KEY_BUILDING_BEACH_BALL",
 					"res://Scenes/pongball.tscn",
@@ -902,6 +955,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_rubber_ducky": BuildingEntry.new(
+					150,
 					"Rubber Ducky",
 					"KEY_BUILDING_RUBBER_DUCKY",
 					"res://Scenes/rubber_ducky.tscn",
@@ -923,10 +977,11 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 			}
 		),
 		"Miscellaneous" : BuildingCategory.new(
-			40,
+			50,
 			load("res://Sprites/icon_miscellaneous.png"),
 			{
 				"starground:building_trough": BuildingEntry.new(
+					10,
 					"Trough",
 					"KEY_BUILDING_TROUGH",
 					"res://Scenes/trough.tscn",
@@ -940,6 +995,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(4, 2),
 				),
 				"starground:building_pressure_pump": BuildingEntry.new(
+					20,
 					"Pressure Pump",
 					"KEY_BUILDING_PRESSURE_PUMP",
 					"res://Scenes/pressure_pump.tscn",
@@ -954,6 +1010,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(2, 2),
 				),
 				"starground:building_pressure_wall": BuildingEntry.new(
+					30,
 					"Pressure Wall",
 					"KEY_BUILDING_PRESSURE_WALL",
 					"res://Scenes/pressure_wall.tscn",
@@ -966,6 +1023,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 3),
 				),
 				"starground:building_pressure_airlock": BuildingEntry.new(
+					40,
 					"Pressure Airlock",
 					"KEY_BUILDING_PRESSURE_AIRLOCK",
 					"res://Scenes/pressure_airlock.tscn",
@@ -988,6 +1046,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					true,
 				),
 				"starground:building_pressure_storage_interface": BuildingEntry.new(
+					50,
 					"Pressure Storage Interface",
 					"KEY_BUILDING_PRESSURE_STORAGE_INTERFACE",
 					"res://Scenes/pressure_storage_interface.tscn",
@@ -1009,6 +1068,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					true,
 				),
 				"starground:building_computer": BuildingEntry.new(
+					60,
 					"Computer",
 					"KEY_BUILDING_COMPUTER",
 					"res://Scenes/computer.tscn",
@@ -1030,6 +1090,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_boat": BuildingEntry.new(
+					70,
 					"Boat",
 					"KEY_BUILDING_BOAT",
 					"res://Scenes/boat.tscn",
@@ -1048,6 +1109,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					true,
 				),
 				"starground:building_skateboard": BuildingEntry.new(
+					80,
 					"Skateboard",
 					"KEY_BUILDING_SKATEBOARD",
 					"res://Scenes/skateboard.tscn",
@@ -1062,6 +1124,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_land_tile": BuildingEntry.new(
+					90,
 					"Land Tile",
 					"KEY_BUILDING_LAND_TILE",
 					"res://Scenes/land_tile.tscn",
@@ -1084,6 +1147,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					["starground:region_tyria"],
 				),
 				"starground:building_training_dummy": BuildingEntry.new(
+					100,
 					"Training Dummy",
 					"KEY_BUILDING_TRAINING_DUMMY",
 					"res://Scenes/training_dummy.tscn",
@@ -1096,6 +1160,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(1, 1),
 				),
 				"starground:building_starlauncher": BuildingEntry.new(
+					100,
 					"Starlauncher",
 					"KEY_BUILDING_STARLAUNCHER",
 					"res://Scenes/spaceship.tscn",
@@ -1109,6 +1174,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					Vector2(3, 3),
 				),
 				"starground:building_speaker": BuildingEntry.new(
+					120,
 					"Speaker",
 					"KEY_BUILDING_SPEAKER",
 					"res://Scenes/speaker.tscn",
@@ -1124,6 +1190,7 @@ func build_default_dictionary() -> Dictionary[String, BuildingCategory]:
 					false,
 				),
 				"starground:building_tool_bench": BuildingEntry.new(
+					130,
 					"Tool Bench",
 					"KEY_BUILDING_TOOL_BENCH",
 					"res://Scenes/tool_bench.tscn",
